@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayoub's Gaming PC Guide</title>
+    
+    <script src="https://cdn.counter.dev/script.js" data-id="d3d11323-db0e-4cfb-a272-ad500b2ae024" data-utcoffset="1"></script>
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #0f172a;
-            color: #ffffff; /* جميع النصوص الأساسية باللون الأبيض */
+            color: #ffffff;
             margin: 0;
             padding: 0;
             text-align: center;
         }
         header {
-            background: linear-gradient(135deg, #1e1b4b, #311042);
+            background: linear-gradient(135deg, #1e1b4b, #311b92);
             padding: 40px 20px;
             border-bottom: 3px solid #a855f7;
         }
-        header h1 { color: #a855f7; margin: 0; font-size: 2.5rem; }
-        header p { color: #ffffff; }
-        .container { max-width: 900px; margin: 30px auto; padding: 20px; }
-        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
         .component-card {
             background-color: #1e293b;
             padding: 25px;
@@ -30,188 +34,148 @@
             border: 1px solid #334155;
             text-align: left;
         }
-        .component-card h3 { color: #38bdf8; margin-top: 0; font-size: 1.4rem; }
-        .component-card p { color: #ffffff; }
-        
+        h3 { color: #3b82f6; margin-top: 0; }
         .btn {
             background-color: #2563eb;
             color: white;
             border: none;
             padding: 12px 24px;
-            font-size: 1rem;
             border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
             transition: 0.3s;
-            margin-top: 10px;
         }
-        .btn:hover {
-            background-color: #3b82f6;
-            box-shadow: 0 0 15px #3b82f6;
-        }
-
-        /* صندوق التفاصيل */
+        .btn:hover { background-color: #3b82f6; }
         .details-box {
             display: none;
             background-color: #020617;
-            border-left: 4px solid #a855f7;
             padding: 15px;
             margin-top: 15px;
+            border-left: 4px solid #a855f7;
             border-radius: 6px;
         }
-        .details-box h4 { color: #a855f7; margin-top: 0; }
-        .details-box ul { color: #e2e8f0; padding-left: 20px; }
-        .details-box li { margin-bottom: 8px; }
-
+        .details-box ul {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
         footer {
             background-color: #020617;
             padding: 20px;
             margin-top: 50px;
-            color: #94a3b8;
+            border-top: 1px solid #334155;
         }
-        footer span { color: #ffffff; }
     </style>
 </head>
-<script src="https://cdn.counter.dev/script.js" data-id="d3d11323-d0de-4cfb-a272-ad500b2ae024" data-utcoffset="1"></script>
 <body>
 
     <header>
-        <h1>Ayoub's Gaming PC Guide</h1>
-        <p>Your ultimate guide to understanding high-end gaming computer components.</p>
+        <h1>Ayoub's Gaming PC Guide 🎮</h1>
+        <p>Your ultimate guide to understanding high-end gaming components.</p>
     </header>
 
     <main class="container">
-        
-        <!-- 1. CPU Card -->
         <div class="component-card">
-            <h3>1. Central Processing Unit (CPU) - The Brain</h3>
-            <p>The CPU handles all the instructions, game physics, and artificial intelligence in your games.</p>
-            <button class="btn" onclick="toggleDetails('cpu-details')">Show Full Specs & Info</button>
-            
-            <div id="cpu-details" class="details-box">
-                <h4>Recommended Gaming CPUs for 2026:</h4>
+            <h3>1. CPU - Central Processing Unit</h3>
+            <p>The "Brain" of the computer that processes game logic and physics.</p>
+            <button class="btn" onclick="toggleDetails('cpu-info')">Show Full Specs & Info</button>
+            <div id="cpu-info" class="details-box">
+                <p><strong>Top Recommendations for 2026:</strong></p>
                 <ul>
-                    <li><strong>High-End:</strong> Intel Core i7-14700K or AMD Ryzen 7 7800X3D (The King of Gaming).</li>
-                    <li><strong>Budget-Friendly:</strong> Intel Core i5-14400 or AMD Ryzen 5 7600.</li>
-                    <li><strong>Key Metric:</strong> Look for high "Single-Core Performance" and at least 6 to 8 Cores for smooth gaming.</li>
+                    <li><strong>Intel Core i9-14900K:</strong> Best for high-end multitasking and gaming.</li>
+                    <li><strong>AMD Ryzen 7 7800X3D:</strong> Currently the king of pure gaming performance.</li>
+                    <li><strong>Look for:</strong> At least 8 Cores and high clock speeds (GHz) for smooth performance.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 2. GPU Card -->
         <div class="component-card">
-            <h3>2. Graphics Processing Unit (GPU) - The Heart</h3>
-            <p>The most important part of a gaming PC! It generates the images, beautiful graphics, and delivers smooth frames.</p>
-            <button class="btn" onclick="toggleDetails('gpu-details')">Show Full Specs & Info</button>
-            
-            <div id="gpu-details" class="details-box">
-                <h4>Recommended Gaming GPUs for 2026:</h4>
+            <h3>2. GPU - Graphics Processing Unit</h3>
+            <p>The most important part for gaming. It renders every frame you see on screen.</p>
+            <button class="btn" onclick="toggleDetails('gpu-info')">Show Full Specs & Info</button>
+            <div id="gpu-info" class="details-box">
+                <p><strong>Top Recommendations for 2026:</strong></p>
                 <ul>
-                    <li><strong>Ultimate Performance:</strong> Nvidia RTX 4080 Super or RTX 4090.</li>
-                    <li><strong>Best Price/Performance:</strong> Nvidia RTX 4070 Super or AMD Radeon RX 7800 XT.</li>
-                    <li><strong>VRAM Guide:</strong> Modern games require at least 12GB to 16GB of VRAM to run textures at Ultra settings without crashing.</li>
+                    <li><strong>NVIDIA RTX 4090:</strong> Unmatched power for 4K ultra gaming.</li>
+                    <li><strong>AMD Radeon RX 7900 XTX:</strong> Great performance with a large VRAM.</li>
+                    <li><strong>VRAM Tip:</strong> Aim for at least 12GB or 16GB of VRAM for modern AAA titles.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 3. RAM Card -->
         <div class="component-card">
-            <h3>3. Random Access Memory (RAM) - The Speed</h3>
-            <p>RAM allows your computer to run heavy games smoothly while having your chat or streaming software open.</p>
-            <button class="btn" onclick="toggleDetails('ram-details')">Show Full Specs & Info</button>
-            
-            <div id="ram-details" class="details-box">
-                <h4>RAM Guide for Modern Gaming:</h4>
+            <h3>3. RAM - Random Access Memory</h3>
+            <p>Stores data that your PC needs to access quickly while gaming or streaming.</p>
+            <button class="btn" onclick="toggleDetails('ram-info')">Show Full Specs & Info</button>
+            <div id="ram-info" class="details-box">
+                <p><strong>Recommended Specs:</strong></p>
                 <ul>
-                    <li><strong>Capacity:</strong> 16GB is fine for basic gaming, but 32GB is highly recommended for newer games and multitasking.</li>
-                    <li><strong>Type:</strong> DDR5 is the modern standard, offering much faster speeds than older DDR4.</li>
-                    <li><strong>Speed:</strong> Look for sweet-spot speeds like 6000MHz with low latency (CL30).</li>
+                    <li><strong>Capacity:</strong> 32GB is the sweet spot for modern gaming and creative work.</li>
+                    <li><strong>Speed:</strong> DDR5 6000MHz or higher is recommended for the latest platforms.</li>
+                    <li><strong>Tip:</strong> Always use two sticks (e.g., 2x16GB) to enable Dual-Channel mode.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 4. Storage Card (جديد) -->
         <div class="component-card">
-            <h3>4. Storage (SSD) - The Fast Loading</h3>
-            <p>Storage is where your games and Windows are installed. Traditional Hard Drives (HDD) are too slow for modern gaming.</p>
-            <button class="btn" onclick="toggleDetails('storage-details')">Show Full Specs & Info</button>
-            
-            <div id="storage-details" class="details-box">
-                <h4>Storage Recommendations:</h4>
+            <h3>4. Storage - NVMe SSD</h3>
+            <p>Determines how fast your games load and how quickly your system boots up.</p>
+            <button class="btn" onclick="toggleDetails('ssd-info')">Show Full Specs & Info</button>
+            <div id="ssd-info" class="details-box">
+                <p><strong>Recommended Storage:</strong></p>
                 <ul>
-                    <li><strong>Type:</strong> NVMe M.2 SSD is mandatory for modern gaming to achieve ultra-fast loading times.</li>
-                    <li><strong>Speed:</strong> PCIe Gen 4 or Gen 5 SSDs offer speeds over 5000 MB/s.</li>
-                    <li><strong>Capacity:</strong> Games are huge now! 1TB is the bare minimum, but 2TB is preferred.</li>
+                    <li><strong>Type:</strong> NVMe M.2 SSD (Gen 4 or Gen 5).</li>
+                    <li><strong>Capacity:</strong> 2TB is ideal as modern games can take up over 100GB each.</li>
+                    <li><strong>Top Pick:</strong> Samsung 990 Pro or WD Black SN850X.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 5. PSU Card (جديد) -->
         <div class="component-card">
-            <h3>5. Power Supply Unit (PSU) - The Energy</h3>
-            <p>The PSU delivers stable power to every single component in your computer. Never cheap out on this part!</p>
-            <button class="btn" onclick="toggleDetails('psu-details')">Show Full Specs & Info</button>
-            
-            <div id="psu-details" class="details-box">
-                <h4>Power Supply Guide:</h4>
+            <h3>5. Motherboard - The Backbone</h3>
+            <p>Connects all your high-end parts together and provides power delivery.</p>
+            <button class="btn" onclick="toggleDetails('mobo-info')">Show Full Specs & Info</button>
+            <div id="mobo-info" class="details-box">
+                <p><strong>Buying Tips:</strong></p>
                 <ul>
-                    <li><strong>Wattage:</strong> 750W to 850W is the sweet spot for high-end GPUs like the RTX 4070/4080.</li>
-                    <li><strong>Efficiency:</strong> Look for "80 Plus Gold" or "80 Plus Platinum" certification.</li>
-                    <li><strong>Standard:</strong> Choose an ATX 3.0 compatible PSU if you are buying a modern Nvidia GPU.</li>
+                    <li><strong>Chipset:</strong> Z790 (Intel) or X670/B650 (AMD) for the best features.</li>
+                    <li><strong>Connectivity:</strong> Look for Wi-Fi 6E/7 and at least 2-3 M.2 slots for storage.</li>
+                    <li><strong>Important:</strong> Ensure the socket matches your CPU (e.g., AM5 for Ryzen 7000).</li>
                 </ul>
             </div>
         </div>
-
-        <!-- 6. Motherboard Card (جديد) -->
-        <div class="component-card">
-            <h3>6. Motherboard - The Backbone</h3>
-            <p>The main circuit board that connects the CPU, GPU, RAM, and storage together, allowing them to communicate.</p>
-            <button class="btn" onclick="toggleDetails('motherboard-details')">Show Full Specs & Info</button>
-            
-            <div id="motherboard-details" class="details-box">
-                <h4>Motherboard Buying Tips:</h4>
-                <ul>
-                    <li><strong>Socket Match:</strong> Must match your CPU (e.g., AM5 for AMD Ryzen 7000/8000, or LGA1700 for Intel 14th Gen).</li>
-                    <li><strong>Chipset:</strong> B650/B760 for great price/performance, or X670/Z790 for heavy overclocking.</li>
-                    <li><strong>Features:</strong> Look for built-in Wi-Fi, good VRM cooling, and enough M.2 slots for your SSDs.</li>
-                </ul>
-            </div>
-        </div>
-
     </main>
 
-    <footer>
-<!-- قسم التفاعل والتواصل المحترف الجديد بألوان الجيمنج -->
-    <div style="margin-top: 40px; padding: 25px; background-color: #0b1329; border-top: 3px solid #3a86ff; border-radius: 12px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        
-        <!-- زر الإعجاب التفاعلي السريع -->
-        <p style="color: #cbd5e1; font-size: 18px; margin-bottom: 12px;">هل أعجبك موقع المبرمج أيوب؟</p>
-        <button id="likeBtn" onclick="sendLike()" style="background: linear-gradient(135deg, #ff007f, #ff4e50); color: white; border: none; padding: 12px 30px; font-size: 16px; font-weight: bold; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4); transition: transform 0.2s;">
-            ❤️ اضغط لتسجيل إعجابك
+    <div style="margin: 40px auto; max-width: 800px; padding: 25px; background-color: #0b1329; border-top: 3px solid #3a86ff; border-radius: 12px; text-align: center;">
+        <p style="color: #cbd5e1; font-size: 18px;">Do you like Programmer Ayoub's website?</p>
+        <button id="likeBtn" onclick="sendLike()" style="background: linear-gradient(135deg, #ff007f, #ff4e50); color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: bold; transition: 0.2s;">
+            ❤️ Click to Like
         </button>
-        
-        <!-- رسالة الشكر المتحركة المخفية -->
-        <p id="thankYouMsg" style="color: #00f5d4; font-size: 16px; margin-top: 15px; display: none; font-weight: bold;">
-            ✨ شكراً لك! تم تسجيل إعجابك بدعم المبرمج أيوب بنجاح! 🚀
-        </p>
-
-        <!-- خط فاصل أنيق -->
+        <p id="thankYouMsg" style="color: #00f5d4; display: none; margin-top: 15px; font-weight: bold;">✨ Thank you! Your like has been registered successfully! 🚀</p>
         <hr style="border: 0; height: 1px; background: #334155; margin: 20px auto; width: 50%;">
-
-        <!-- عداد الزوار المضمون -->
-        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">إجمالي زيارات الموقع:</p>
+        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">Total Website Visits:</p>
         <img src="https://hitcount.io/profiles/620245/badges/620245_1201556015.svg" alt="Visitors Counter" style="border: 2px solid #334155; border-radius: 5px; padding: 2px;">
     </div>
 
-    <!-- كود الذكاء البرمجي لتشغيل الزر والرسالة عند الضغط -->
+    <footer>
+        <p>All Rights Reserved © 2026 | Designed by Programmer <span>Ayoub</span></p>
+    </footer>
+
     <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+
         function sendLike() {
             document.getElementById('thankYouMsg').style.display = 'block';
             let btn = document.getElementById('likeBtn');
-            btn.style.transform = 'scale(0.95)';
+            btn.innerHTML = '❤️ Liked Successfully!';
             btn.style.background = '#334155';
-            btn.innerHTML = '❤️ تم الإعجاب بنجاح!';
-            btn.disabled = true; 
+            btn.disabled = true;
         }
     </script>
 
