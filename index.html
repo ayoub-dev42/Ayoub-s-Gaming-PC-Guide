@@ -180,27 +180,39 @@
     </main>
 
     <footer>
-        <p>All Rights Reserved © 2026 | Designed by Programmer <span>Ayoub</span></p>
-    </footer>
+<!-- قسم التفاعل والتواصل المحترف الجديد بألوان الجيمنج -->
+    <div style="margin-top: 40px; padding: 25px; background-color: #0b1329; border-top: 3px solid #3a86ff; border-radius: 12px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        
+        <!-- زر الإعجاب التفاعلي السريع -->
+        <p style="color: #cbd5e1; font-size: 18px; margin-bottom: 12px;">هل أعجبك موقع المبرمج أيوب؟</p>
+        <button id="likeBtn" onclick="sendLike()" style="background: linear-gradient(135deg, #ff007f, #ff4e50); color: white; border: none; padding: 12px 30px; font-size: 16px; font-weight: bold; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4); transition: transform 0.2s;">
+            ❤️ اضغط لتسجيل إعجابك
+        </button>
+        
+        <!-- رسالة الشكر المتحركة المخفية -->
+        <p id="thankYouMsg" style="color: #00f5d4; font-size: 16px; margin-top: 15px; display: none; font-weight: bold;">
+            ✨ شكراً لك! تم تسجيل إعجابك بدعم المبرمج أيوب بنجاح! 🚀
+        </p>
 
+        <!-- خط فاصل أنيق -->
+        <hr style="border: 0; height: 1px; background: #334155; margin: 20px auto; width: 50%;">
+
+        <!-- عداد الزوار المضمون -->
+        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">إجمالي زيارات الموقع:</p>
+        <img src="https://hitcount.io/profiles/620245/badges/620245_1201556015.svg" alt="Visitors Counter" style="border: 2px solid #334155; border-radius: 5px; padding: 2px;">
+    </div>
+
+    <!-- كود الذكاء البرمجي لتشغيل الزر والرسالة عند الضغط -->
     <script>
-        function toggleDetails(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "block") {
-                element.style.display = "none";
-            } else {
-                element.style.display = "block";
-            }
+        function sendLike() {
+            document.getElementById('thankYouMsg').style.display = 'block';
+            let btn = document.getElementById('likeBtn');
+            btn.style.transform = 'scale(0.95)';
+            btn.style.background = '#334155';
+            btn.innerHTML = '❤️ تم الإعجاب بنجاح!';
+            btn.disabled = true; 
         }
     </script>
-<!-- قسم التفاعل: العداد وزر الإعجاب الجديد -->
-    <div style="margin-top: 30px; padding: 20px; background-color: #020617; border-top: 2px solid #334155; text-align: center;">
-        
-        <!-- زر الإعجاب الجديد والمضمون -->
-        <p style="color: #94a3b8; margin-bottom: 10px; font-family: sans-serif;">Like this website?</p>
-        <iframe src="https://lyket.dev/p/ayoub-gaming-pc/like" style="border:none; width: 80px; height: 50px; overflow:hidden;"></iframe>
-        
-        <!-- عداد الزوار -->
-        <p style="color: #94a3b8; margin-top: 15px; margin-bottom: 5px; font-family: sans-serif;">Total Visitors:</p>
-        <img src="https://hitcount.io/profiles/620245/badges/620245_1201556015.svg" alt="Hits">
-    </div>
+
+</body>
+</html>
