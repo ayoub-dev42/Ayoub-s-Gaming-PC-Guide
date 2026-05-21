@@ -4,215 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayoub's Ultimate Gaming PC Guide</title>
-    
     <script src="https://cdn.counter.dev/script.js" data-id="d3d11323-db0e-4cfb-a272-ad500b2ae024" data-utcoffset="1"></script>
-
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background: linear-gradient(135deg, #1e1b4b, #311b92);
-            padding: 40px 20px;
-            border-bottom: 3px solid #a855f7;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-        .component-card {
-            background-color: #1e293b;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            border: 1px solid #334155;
-            text-align: left;
-        }
-        h3 { color: #3b82f6; margin-top: 0; }
-        .btn {
-            background-color: #2563eb;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .btn:hover { background-color: #3b82f6; }
-        .details-box {
-            display: none;
-            background-color: #020617;
-            padding: 15px;
-            margin-top: 15px;
-            border-left: 4px solid #a855f7;
-            border-radius: 6px;
-        }
-        .details-box ul {
-            padding-left: 20px;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #020617;
-            padding: 20px;
-            margin-top: 50px;
-            border-top: 1px solid #334155;
-        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #0f172a; color: #ffffff; text-align: center; margin: 0; padding: 20px; }
+        .container { max-width: 850px; margin: 0 auto; }
+        .component-card { background-color: #1e293b; padding: 25px; margin-bottom: 20px; border-radius: 15px; border: 1px solid #334155; text-align: left; }
+        h3 { color: #3b82f6; margin-top: 0; font-size: 1.5rem; }
+        .btn { background-color: #2563eb; color: white; border: none; padding: 15px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; text-align: left; font-size: 1rem; margin-top: 10px; }
+        .details-box { display: none; background-color: #020617; padding: 20px; margin-top: 15px; border-left: 5px solid #a855f7; border-radius: 8px; line-height: 1.8; color: #e2e8f0; }
+        .stats-box { margin-top: 40px; padding: 25px; background-color: #0b1329; border-top: 3px solid #3a86ff; border-radius: 12px; }
+        footer { margin-top: 50px; color: #94a3b8; font-weight: bold; padding: 20px; border-top: 1px solid #334155; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Ayoub's Ultimate Gaming PC Guide 🎮</h1>
-        <p>Comprehensive knowledge for building the perfect high-end machine.</p>
-    </header>
+    <h1>Ayoub's Ultimate Gaming PC Guide 🎮</h1>
+    <p>The definitive technical repository for high-performance gaming hardware in 2026.</p>
 
-    <main class="container">
+    <div class="container">
         <div class="component-card">
-            <h3>1. CPU - Central Processing Unit</h3>
-            <p>The brain of the system that handles logic and game physics.</p>
-            <button class="btn" onclick="toggleDetails('cpu-info')">Show Full Specs & Info</button>
-            <div id="cpu-info" class="details-box">
+            <h3>1. CPU - The Brain</h3>
+            <button class="btn" onclick="toggle('cpu')">▼ Show Detailed Technical Guide</button>
+            <div id="cpu" class="details-box">
                 <ul>
-                    <li><strong>Best Performance:</strong> Intel Core i9-14900K.</li>
-                    <li><strong>Gaming King:</strong> AMD Ryzen 7 7800X3D.</li>
-                    <li><strong>Advice:</strong> High core counts matter for streaming and productivity.</li>
+                    <li><strong>Intel Core i9-14900K:</strong> 24 cores (8P + 16E) designed for heavy-duty multitasking and content creation.</li>
+                    <li><strong>AMD Ryzen 7 7800X3D:</strong> Features L3 Cache stacking technology that boosts frame rates in open-world games.</li>
+                    <li><strong>Architecture:</strong> Always check socket compatibility; current generations require LGA1700 or AM5 sockets.</li>
+                    <li><strong>Thermal Overhead:</strong> These chips run hot; high-end air or liquid cooling is mandatory.</li>
+                    <li><strong>Bottlenecking:</strong> Pairing a high-end CPU with a low-end GPU limits your gaming experience.</li>
+                    <li><strong>Instructions:</strong> Look for AVX-512 support if you are doing professional rendering.</li>
                 </ul>
             </div>
         </div>
 
         <div class="component-card">
-            <h3>2. GPU - Graphics Processing Unit</h3>
-            <p>The heart of gaming. It determines your FPS and visual quality.</p>
-            <button class="btn" onclick="toggleDetails('gpu-info')">Show Full Specs & Info</button>
-            <div id="gpu-info" class="details-box">
+            <h3>2. GPU - The Powerhouse</h3>
+            <button class="btn" onclick="toggle('gpu')">▼ Show Detailed Technical Guide</button>
+            <div id="gpu" class="details-box">
                 <ul>
-                    <li><strong>High-End:</strong> NVIDIA RTX 4090 (24GB VRAM).</li>
-                    <li><strong>Value Choice:</strong> NVIDIA RTX 4070 Super or AMD RX 7800 XT.</li>
-                    <li><strong>Tip:</strong> Always check if your case has enough space for the GPU length.</li>
+                    <li><strong>NVIDIA RTX 4090:</strong> The industry standard, featuring 24GB VRAM and DLSS 3.5 AI frame generation.</li>
+                    <li><strong>AMD RX 7900 XTX:</strong> Excellent for rasterization tasks and offers immense raw power.</li>
+                    <li><strong>VRAM Importance:</strong> Modern games in 2026 demand at least 12GB+ of VRAM.</li>
+                    <li><strong>Ray Tracing:</strong> Dedicated RT cores are essential for realistic lighting and shadows.</li>
+                    <li><strong>Power Connectors:</strong> Modern cards utilize 12VHPWR connectors; ensure PSU compatibility.</li>
+                    <li><strong>Cooling:</strong> Tri-fan designs are recommended to maintain thermal limits under heavy load.</li>
                 </ul>
             </div>
         </div>
 
         <div class="component-card">
             <h3>3. RAM - System Memory</h3>
-            <p>Provides fast access for active programs and games.</p>
-            <button class="btn" onclick="toggleDetails('ram-info')">Show Full Specs & Info</button>
-            <div id="ram-info" class="details-box">
+            <button class="btn" onclick="toggle('ram')">▼ Show Detailed Technical Guide</button>
+            <div id="ram" class="details-box">
                 <ul>
-                    <li><strong>Ideal Amount:</strong> 32GB (2x16GB) is perfect for 2026.</li>
-                    <li><strong>Speed:</strong> Aim for DDR5-6000 CL30 for maximum stability.</li>
+                    <li><strong>Standard:</strong> DDR5 is now the requirement; DDR4 is officially legacy for high-end builds.</li>
+                    <li><strong>Capacity:</strong> 32GB is the modern sweet spot; 64GB recommended for heavy streaming.</li>
+                    <li><strong>Latency:</strong> CL30 represents the best response time (CAS latency).</li>
+                    <li><strong>Frequency:</strong> 6000MHz is the "golden ratio" for AMD's memory controller stability.</li>
+                    <li><strong>Dual Channel:</strong> Always use two modules to maximize memory bandwidth.</li>
+                    <li><strong>XMP/EXPO:</strong> Remember to enable these profiles in the BIOS for full speeds.</li>
                 </ul>
             </div>
         </div>
 
         <div class="component-card">
             <h3>4. Storage - NVMe SSD</h3>
-            <p>Fast storage for lightning-quick loading times.</p>
-            <button class="btn" onclick="toggleDetails('ssd-info')">Show Full Specs & Info</button>
-            <div id="ssd-info" class="details-box">
+            <button class="btn" onclick="toggle('ssd')">▼ Show Detailed Technical Guide</button>
+            <div id="ssd" class="details-box">
                 <ul>
-                    <li><strong>Primary Drive:</strong> 2TB M.2 NVMe SSD Gen 4/5.</li>
-                    <li><strong>Reliability:</strong> Samsung 990 Pro or Crucial T705.</li>
+                    <li><strong>Gen 5 NVMe:</strong> Speeds exceeding 10,000 MB/s, ideal for pro-level workflows.</li>
+                    <li><strong>Gen 4 NVMe:</strong> Best value for gaming; fast loading speeds for all AAA titles.</li>
+                    <li><strong>Longevity:</strong> Check the TBW rating to ensure drive durability over years.</li>
+                    <li><strong>Cache:</strong> Always choose an SSD with a DRAM cache for sustained performance.</li>
+                    <li><strong>Capacity:</strong> 2TB is the baseline; modern games frequently exceed 100GB.</li>
+                    <li><strong>Heatsinks:</strong> High-speed NVMe drives generate heat; motherboard heatsink recommended.</li>
                 </ul>
             </div>
         </div>
 
         <div class="component-card">
             <h3>5. Motherboard - The Backbone</h3>
-            <p>Connects all your components and manages power distribution.</p>
-            <button class="btn" onclick="toggleDetails('mobo-info')">Show Full Specs & Info</button>
-            <div id="mobo-info" class="details-box">
+            <button class="btn" onclick="toggle('mobo')">▼ Show Detailed Technical Guide</button>
+            <div id="mobo" class="details-box">
                 <ul>
-                    <li><strong>Intel Socket:</strong> LGA1700 (Z790 Chipset).</li>
-                    <li><strong>AMD Socket:</strong> AM5 (X670E or B650 Chipset).</li>
+                    <li><strong>VRM Design:</strong> High-phase power design is crucial for CPU stability.</li>
+                    <li><strong>Connectivity:</strong> Ensure sufficient USB-C and USB 3.2 Gen 2 ports.</li>
+                    <li><strong>Expansion:</strong> Look for 3+ M.2 slots for storage and PCIe 5.0 support.</li>
+                    <li><strong>Audio:</strong> High-quality ALC1220 audio chipsets provide better sound stage.</li>
+                    <li><strong>Networking:</strong> Wi-Fi 7 and 2.5GbE Ethernet ports for low-latency gaming.</li>
+                    <li><strong>BIOS:</strong> User-friendly BIOS interfaces are vital for performance tweaks.</li>
                 </ul>
             </div>
         </div>
 
         <div class="component-card">
-            <h3>6. PSU - Power Supply Unit</h3>
-            <p>The "Engine" that provides stable power to your expensive parts.</p>
-            <button class="btn" onclick="toggleDetails('psu-info')">Show Full Specs & Info</button>
-            <div id="psu-info" class="details-box">
+            <h3>6. PSU - Power Supply</h3>
+            <button class="btn" onclick="toggle('psu')">▼ Show Detailed Technical Guide</button>
+            <div id="psu" class="details-box">
                 <ul>
-                    <li><strong>Wattage:</strong> 850W to 1000W for high-end builds.</li>
-                    <li><strong>Efficiency:</strong> Look for 80 Plus Gold or Platinum rating.</li>
-                    <li><strong>Safety:</strong> Never go cheap on the PSU; it protects your entire PC.</li>
+                    <li><strong>Wattage:</strong> 1000W is the "future-proof" choice for upgrades.</li>
+                    <li><strong>Rating:</strong> 80+ Gold or Platinum efficiency saves power and heat.</li>
+                    <li><strong>Modularity:</strong> Fully modular PSUs are mandatory for cleaner aesthetics.</li>
+                    <li><strong>Safety:</strong> OVP, OPP, and SCP protection is essential for hardware safety.</li>
+                    <li><strong>Capacitors:</strong> Japanese 105°C capacitors ensure long-term durability.</li>
+                    <li><strong>Silence:</strong> Zero RPM fan modes available on high-end units.</li>
                 </ul>
             </div>
         </div>
 
         <div class="component-card">
-            <h3>7. Cooling - Air or Liquid (AIO)</h3>
-            <p>Keeps your CPU from overheating under heavy load.</p>
-            <button class="btn" onclick="toggleDetails('cool-info')">Show Full Specs & Info</button>
-            <div id="cool-info" class="details-box">
+            <h3>7. Cooling - Thermal Management</h3>
+            <button class="btn" onclick="toggle('cool')">▼ Show Detailed Technical Guide</button>
+            <div id="cool" class="details-box">
                 <ul>
-                    <li><strong>Liquid (AIO):</strong> 360mm or 420mm radiators for high-end i9/Ryzen 9.</li>
-                    <li><strong>Air Cooling:</strong> Noctua NH-D15 for silence and reliability.</li>
+                    <li><strong>Liquid AIO:</strong> 360mm+ radiators needed for i9 or Ryzen 9.</li>
+                    <li><strong>Air Coolers:</strong> Noctua NH-D15 is a legendary choice for reliability.</li>
+                    <li><strong>Fan Curves:</strong> Set custom curves for a balance of noise and cooling.</li>
+                    <li><strong>Case Fans:</strong> Balanced intake/exhaust prevents "dead air".</li>
+                    <li><strong>Thermal Paste:</strong> Use high-conductivity paste for better heat transfer.</li>
+                    <li><strong>Dust Filters:</strong> Clean monthly to keep components from insulating heat.</li>
                 </ul>
             </div>
         </div>
 
         <div class="component-card">
-            <h3>8. PC Case - The Chassis</h3>
-            <p>The shell that holds everything. Airflow is the most important feature.</p>
-            <button class="btn" onclick="toggleDetails('case-info')">Show Full Specs & Info</button>
-            <div id="case-info" class="details-box">
+            <h3>8. Case - The Chassis</h3>
+            <button class="btn" onclick="toggle('case')">▼ Show Detailed Technical Guide</button>
+            <div id="case" class="details-box">
                 <ul>
-                    <li><strong>Style:</strong> Mid-Tower or Full-Tower.</li>
-                    <li><strong>Airflow:</strong> Mesh front panels are best for cooling.</li>
-                    <li><strong>Popular:</strong> Lian Li O11 Dynamic or Corsair 4000D/5000D.</li>
+                    <li><strong>Mesh Panels:</strong> Mesh front panel allows unrestricted airflow.</li>
+                    <li><strong>Cable Management:</strong> Deep channels make building much easier.</li>
+                    <li><strong>Clearance:</strong> Ensure GPU length and AIO thickness fit inside.</li>
+                    <li><strong>Aesthetics:</strong> Tempered glass panels are great for showcasing builds.</li>
+                    <li><strong>Expansion:</strong> Vertical mounting options are a bonus for looks.</li>
+                    <li><strong>Front I/O:</strong> Accessible USB-C ports are a must in 2026.</li>
                 </ul>
             </div>
         </div>
 
         <div class="component-card">
-            <h3>9. Monitor - The Window</h3>
-            <p>Where the magic happens. High refresh rates are key for gamers.</p>
-            <button class="btn" onclick="toggleDetails('monitor-info')">Show Full Specs & Info</button>
-            <div id="monitor-info" class="details-box">
+            <h3>9. Monitor - The Display</h3>
+            <button class="btn" onclick="toggle('mon')">▼ Show Detailed Technical Guide</button>
+            <div id="mon" class="details-box">
                 <ul>
-                    <li><strong>Resolution:</strong> 1440p (2K) or 2160p (4K).</li>
-                    <li><strong>Refresh Rate:</strong> 144Hz, 240Hz, or even 360Hz for esports.</li>
-                    <li><strong>Panel Type:</strong> OLED is the best for color and response time.</li>
+                    <li><strong>Refresh Rate:</strong> 144Hz baseline; 240Hz+ for competitive gaming.</li>
+                    <li><strong>Panel Quality:</strong> OLED for infinite contrast and instant response.</li>
+                    <li><strong>Color:</strong> DCI-P3 coverage >95% for professional visuals.</li>
+                    <li><strong>VRR:</strong> G-Sync/FreeSync eliminates tearing and stutter.</li>
+                    <li><strong>Brightness:</strong> Higher peak nits for vibrant HDR content.</li>
+                    <li><strong>Ergonomics:</strong> Height and tilt adjustments for long-term comfort.</li>
                 </ul>
             </div>
         </div>
-    </main>
+    </div>
 
-    <div style="margin: 40px auto; max-width: 800px; padding: 25px; background-color: #0b1329; border-top: 3px solid #3a86ff; border-radius: 12px; text-align: center;">
-        <p style="color: #cbd5e1; font-size: 18px;">Do you like Programmer Ayoub's ultimate guide?</p>
-        <button id="likeBtn" onclick="sendLike()" style="background: linear-gradient(135deg, #ff007f, #ff4e50); color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: bold; transition: 0.2s;">
-            ❤️ Click to Like
-        </button>
-        <p id="thankYouMsg" style="color: #00f5d4; display: none; margin-top: 15px; font-weight: bold;">✨ Thank you! Your appreciation is registered! 🚀</p>
+    <div class="stats-box">
+        <p>Do you like Ayoub's Guide?</p>
+        <button id="likeBtn" onclick="sendLike()" class="btn" style="background: linear-gradient(135deg, #ff007f, #ff4e50); text-align: center;">❤️ Like</button>
+        <p id="thankYouMsg" style="color: #00f5d4; display: none; margin-top: 15px; font-weight: bold;">✨ Thank you! Successfully registered! 🚀</p>
         <hr style="border: 0; height: 1px; background: #334155; margin: 20px auto; width: 50%;">
-        <p style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">Total Website Visits:</p>
-        <img src="https://hitcount.io/profiles/620245/badges/620245_1201556015.svg" alt="Visitors Counter" style="border: 2px solid #334155; border-radius: 5px; padding: 2px;">
+        <p>Total Website Visits:</p>
+        <img src="https://hitcount.io/profiles/620245/badges/620245_1201556015.svg" alt="Counter">
     </div>
 
     <footer>
-        <p>All Rights Reserved © 2026 | Designed by Programmer <span>Ayoub</span></p>
+        <p>All Rights Reserved © 2026 | Created by Programmer Ayoub</p>
     </footer>
 
     <script>
-        function toggleDetails(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "block") {
-                element.style.display = "none";
-            } else {
-                element.style.display = "block";
-            }
+        function toggle(id) {
+            var el = document.getElementById(id);
+            el.style.display = (el.style.display === "block") ? "none" : "block";
         }
-
         function sendLike() {
             document.getElementById('thankYouMsg').style.display = 'block';
             let btn = document.getElementById('likeBtn');
@@ -221,6 +184,5 @@
             btn.disabled = true;
         }
     </script>
-
 </body>
 </html>
