@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoub's Gaming PC Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff; /* جميع النصوص الأساسية باللون الأبيض */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(135deg, #1e1b4b, #311042);
+            padding: 40px 20px;
+            border-bottom: 3px solid #a855f7;
+        }
+        header h1 { color: #a855f7; margin: 0; font-size: 2.5rem; }
+        header p { color: #ffffff; }
+        .container { max-width: 900px; margin: 30px auto; padding: 20px; }
+        
+        .component-card {
+            background-color: #1e293b;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            text-align: left;
+        }
+        .component-card h3 { color: #38bdf8; margin-top: 0; font-size: 1.4rem; }
+        .component-card p { color: #ffffff; }
+        
+        .btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #3b82f6;
+            box-shadow: 0 0 15px #3b82f6;
+        }
+
+        /* صندوق التفاصيل */
+        .details-box {
+            display: none;
+            background-color: #020617;
+            border-left: 4px solid #a855f7;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+        .details-box h4 { color: #a855f7; margin-top: 0; }
+        .details-box ul { color: #e2e8f0; padding-left: 20px; }
+        .details-box li { margin-bottom: 8px; }
+
+        footer {
+            background-color: #020617;
+            padding: 20px;
+            margin-top: 50px;
+            color: #94a3b8;
+        }
+        footer span { color: #ffffff; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ayoub's Gaming PC Guide</h1>
+        <p>Your ultimate guide to understanding high-end gaming computer components.</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- 1. CPU Card -->
+        <div class="component-card">
+            <h3>1. Central Processing Unit (CPU) - The Brain</h3>
+            <p>The CPU handles all the instructions, game physics, and artificial intelligence in your games.</p>
+            <button class="btn" onclick="toggleDetails('cpu-details')">Show Full Specs & Info</button>
+            
+            <div id="cpu-details" class="details-box">
+                <h4>Recommended Gaming CPUs for 2026:</h4>
+                <ul>
+                    <li><strong>High-End:</strong> Intel Core i7-14700K or AMD Ryzen 7 7800X3D (The King of Gaming).</li>
+                    <li><strong>Budget-Friendly:</strong> Intel Core i5-14400 or AMD Ryzen 5 7600.</li>
+                    <li><strong>Key Metric:</strong> Look for high "Single-Core Performance" and at least 6 to 8 Cores for smooth gaming.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2. GPU Card -->
+        <div class="component-card">
+            <h3>2. Graphics Processing Unit (GPU) - The Heart</h3>
+            <p>The most important part of a gaming PC! It generates the images, beautiful graphics, and delivers smooth frames.</p>
+            <button class="btn" onclick="toggleDetails('gpu-details')">Show Full Specs & Info</button>
+            
+            <div id="gpu-details" class="details-box">
+                <h4>Recommended Gaming GPUs for 2026:</h4>
+                <ul>
+                    <li><strong>Ultimate Performance:</strong> Nvidia RTX 4080 Super or RTX 4090.</li>
+                    <li><strong>Best Price/Performance:</strong> Nvidia RTX 4070 Super or AMD Radeon RX 7800 XT.</li>
+                    <li><strong>VRAM Guide:</strong> Modern games require at least 12GB to 16GB of VRAM to run textures at Ultra settings without crashing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 3. RAM Card -->
+        <div class="component-card">
+            <h3>3. Random Access Memory (RAM) - The Speed</h3>
+            <p>RAM allows your computer to run heavy games smoothly while having your chat or streaming software open.</p>
+            <button class="btn" onclick="toggleDetails('ram-details')">Show Full Specs & Info</button>
+            
+            <div id="ram-details" class="details-box">
+                <h4>RAM Guide for Modern Gaming:</h4>
+                <ul>
+                    <li><strong>Capacity:</strong> 16GB is fine for basic gaming, but 32GB is highly recommended for newer games and multitasking.</li>
+                    <li><strong>Type:</strong> DDR5 is the modern standard, offering much faster speeds than older DDR4.</li>
+                    <li><strong>Speed:</strong> Look for sweet-spot speeds like 6000MHz with low latency (CL30).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 4. Storage Card (جديد) -->
+        <div class="component-card">
+            <h3>4. Storage (SSD) - The Fast Loading</h3>
+            <p>Storage is where your games and Windows are installed. Traditional Hard Drives (HDD) are too slow for modern gaming.</p>
+            <button class="btn" onclick="toggleDetails('storage-details')">Show Full Specs & Info</button>
+            
+            <div id="storage-details" class="details-box">
+                <h4>Storage Recommendations:</h4>
+                <ul>
+                    <li><strong>Type:</strong> NVMe M.2 SSD is mandatory for modern gaming to achieve ultra-fast loading times.</li>
+                    <li><strong>Speed:</strong> PCIe Gen 4 or Gen 5 SSDs offer speeds over 5000 MB/s.</li>
+                    <li><strong>Capacity:</strong> Games are huge now! 1TB is the bare minimum, but 2TB is preferred.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 5. PSU Card (جديد) -->
+        <div class="component-card">
+            <h3>5. Power Supply Unit (PSU) - The Energy</h3>
+            <p>The PSU delivers stable power to every single component in your computer. Never cheap out on this part!</p>
+            <button class="btn" onclick="toggleDetails('psu-details')">Show Full Specs & Info</button>
+            
+            <div id="psu-details" class="details-box">
+                <h4>Power Supply Guide:</h4>
+                <ul>
+                    <li><strong>Wattage:</strong> 750W to 850W is the sweet spot for high-end GPUs like the RTX 4070/4080.</li>
+                    <li><strong>Efficiency:</strong> Look for "80 Plus Gold" or "80 Plus Platinum" certification.</li>
+                    <li><strong>Standard:</strong> Choose an ATX 3.0 compatible PSU if you are buying a modern Nvidia GPU.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 6. Motherboard Card (جديد) -->
+        <div class="component-card">
+            <h3>6. Motherboard - The Backbone</h3>
+            <p>The main circuit board that connects the CPU, GPU, RAM, and storage together, allowing them to communicate.</p>
+            <button class="btn" onclick="toggleDetails('motherboard-details')">Show Full Specs & Info</button>
+            
+            <div id="motherboard-details" class="details-box">
+                <h4>Motherboard Buying Tips:</h4>
+                <ul>
+                    <li><strong>Socket Match:</strong> Must match your CPU (e.g., AM5 for AMD Ryzen 7000/8000, or LGA1700 for Intel 14th Gen).</li>
+                    <li><strong>Chipset:</strong> B650/B760 for great price/performance, or X670/Z790 for heavy overclocking.</li>
+                    <li><strong>Features:</strong> Look for built-in Wi-Fi, good VRM cooling, and enough M.2 slots for your SSDs.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>All Rights Reserved © 2026 | Designed by Programmer <span>Ayoub</span></p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
